@@ -1,96 +1,134 @@
-document.addEventListener("DOMContentLoaded", function () {
+```javascript
+/* =========================
+   SMOOTH SCROLL
+========================= */
 
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
 
-    /* =========================
-       1. เอฟเฟกต์การ์ดปรากฏ
-       เมื่อเลื่อนหน้าจอ
-    ========================== */
+    link.addEventListener('click', function(event) {
 
+        event.preventDefault();
 
-    const elements = document.querySelectorAll(
+        const target = document.querySelector(
+            this.getAttribute('href')
+        );
 
-        ".work-card, .skill, .profile-box, .gallery img"
+        if (target) {
 
-    );
+            target.scrollIntoView({
 
-
-    const observer = new IntersectionObserver(
-
-        function (entries) {
-
-
-            entries.forEach(function (entry) {
-
-
-                if (entry.isIntersecting) {
-
-
-                    entry.target.classList.add("show");
-
-
-                }
+                behavior: 'smooth'
 
             });
 
-
-        },
-
-        {
-
-            threshold: 0.15
-
         }
-
-    );
-
-
-    elements.forEach(function (element) {
-
-
-        observer.observe(element);
-
 
     });
 
-
-    /* =========================
-       2. คลิกที่รูป Gallery
-       เพื่อขยายรูป
-    ========================== */
+});
 
 
-    const galleryImages = document.querySelectorAll(
+/* =========================
+   กดรูปเพื่อดูภาพขนาดใหญ่
+========================= */
 
-        ".gallery img"
-
-    );
-
-
-    galleryImages.forEach(function (image) {
-
-
-        image.addEventListener("click", function () {
+const images = document.querySelectorAll(
+    '.photo-card img, .hero-image img'
+);
 
 
-            image.classList.toggle("zoom");
+images.forEach(function(image) {
 
+    image.addEventListener('click', function() {
+
+        const overlay = document.createElement('div');
+
+        overlay.className = 'image-overlay';
+
+
+        const largeImage = document.createElement('img');
+
+        largeImage.src = this.src;
+
+
+        overlay.appendChild(largeImage);
+
+        document.body.appendChild(overlay);
+
+
+        /* กดที่พื้นหลังเพื่อปิด */
+
+        overlay.addEventListener('click', function() {
+
+            overlay.remove();
 
         });
 
-
     });
 
-
-    /* =========================
-       3. แสดงข้อความต้อนรับ
-    ========================== */
+});
 
 
-    console.log(
+/* =========================
+   แสดงการ์ดเมื่อเลื่อนหน้าจอ
+========================= */
 
-        "Welcome to Biology Portfolio 🔬🧬🌿"
+const cards = document.querySelectorAll(
+    '.photo-card'
+);
 
-    );
 
+const observer = new IntersectionObserver(
+
+    function(entries) {
+
+        entries.forEach(function(entry) {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add(
+                    'show'
+                );
+
+            }
+
+        });
+
+    },
+
+    {
+
+        threshold: 0.15
+
+    }
+
+);
+
+
+cards.forEach(function(card) {
+
+    observer.observe(card);
 
 });
+
+
+/* =========================
+   เอฟเฟกต์เลื่อนเมนู
+========================= */
+
+window.addEventListener('scroll', function() {
+
+    const nav = document.querySelector('nav');
+
+    if (window.scrollY > 50) {
+
+        nav.classList.add('scrolled');
+
+    } else {
+
+        nav.classList.remove('scrolled');
+
+    }
+
+});
+```
