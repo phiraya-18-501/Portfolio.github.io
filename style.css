@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600&display=swap');
+```css
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
 
 
-/* =========================
-   RESET
-========================= */
+/* ตั้งค่าพื้นฐาน */
 
 * {
 
@@ -13,6 +12,13 @@
 
     box-sizing: border-box;
 
+    font-family: 'Kanit', sans-serif;
+
+}
+
+
+html {
+
     scroll-behavior: smooth;
 
 }
@@ -20,39 +26,17 @@
 
 body {
 
-    font-family: 'Prompt', sans-serif;
+    background: #07100c;
 
-    color: #26382d;
+    color: white;
 
-    background:
-
-        radial-gradient(
-
-            circle at 10% 10%,
-
-            #eadff0,
-
-            transparent 25%
-
-        ),
-
-        radial-gradient(
-
-            circle at 90% 20%,
-
-            #dceee1,
-
-            transparent 25%
-
-        ),
-
-        #f7faf7;
+    overflow-x: hidden;
 
 }
 
 
 /* =========================
-   NAVBAR
+   เมนูด้านบน
 ========================= */
 
 nav {
@@ -60,8 +44,6 @@ nav {
     position: fixed;
 
     top: 0;
-
-    left: 0;
 
     width: 100%;
 
@@ -73,11 +55,11 @@ nav {
 
     align-items: center;
 
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(7, 16, 12, 0.85);
 
     backdrop-filter: blur(15px);
 
-    border-bottom: 1px solid #dce8df;
+    border-bottom: 1px solid rgba(101, 230, 161, 0.15);
 
     z-index: 1000;
 
@@ -86,70 +68,150 @@ nav {
 
 .logo {
 
-    font-family: 'Kanit', sans-serif;
-
     font-size: 24px;
 
     font-weight: 600;
 
-    color: #315c45;
+    color: #a879ff;
 
 }
 
 
 .logo span {
 
-    color: #9566ae;
+    color: #65e6a1;
 
 }
 
 
-nav ul {
+.menu {
 
     display: flex;
 
-    gap: 30px;
-
-    list-style: none;
+    gap: 25px;
 
 }
 
 
-nav a {
+.menu a {
+
+    color: #ffffff;
 
     text-decoration: none;
-
-    color: #526157;
 
     transition: 0.3s;
 
 }
 
 
-nav a:hover {
+.menu a:hover {
 
-    color: #9566ae;
+    color: #65e6a1;
 
 }
 
 
 /* =========================
-   HERO
+   หน้าแรก
 ========================= */
 
 .hero {
 
     min-height: 100vh;
 
-    padding: 140px 10% 80px;
+    padding: 150px 8% 80px;
 
     display: flex;
 
-    align-items: center;
-
     justify-content: space-between;
 
+    align-items: center;
+
     gap: 60px;
+
+
+    background:
+
+        radial-gradient(
+
+            circle at 80% 20%,
+
+            rgba(168, 121, 255, 0.25),
+
+            transparent 35%
+
+        ),
+
+
+        radial-gradient(
+
+            circle at 10% 80%,
+
+            rgba(101, 230, 161, 0.15),
+
+            transparent 35%
+
+        );
+
+}
+
+
+.hero-text {
+
+    max-width: 600px;
+
+}
+
+
+.subtitle {
+
+    color: #65e6a1;
+
+    font-size: 17px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.hero-text h1 {
+
+    font-size: clamp(50px, 8vw, 85px);
+
+    line-height: 1.05;
+
+    margin: 20px 0;
+
+}
+
+
+.hero-text h1 span {
+
+    color: #a879ff;
+
+}
+
+
+.description {
+
+    color: #b9c5be;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+}
+
+
+.button {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 14px 30px;
+
+    border-radius: 30px;
 
     background:
 
@@ -157,95 +219,17 @@ nav a:hover {
 
             135deg,
 
-            #f8fbf8,
+            #65e6a1,
 
-            #edf5ef
+            #a879ff
 
         );
 
-    overflow: hidden;
-
-}
-
-
-.hero-text {
-
-    max-width: 650px;
-
-}
-
-
-.badge {
-
-    display: inline-block;
-
-    padding: 8px 18px;
-
-    margin-bottom: 22px;
-
-    border-radius: 30px;
-
-    background: #eadff0;
-
-    color: #754c89;
-
-    font-size: 14px;
-
-}
-
-
-.hero h1 {
-
-    font-family: 'Kanit', sans-serif;
-
-    font-size: clamp(45px, 7vw, 80px);
-
-    line-height: 1.05;
-
-    color: #315c45;
-
-}
-
-
-.hero h1 span {
-
-    color: #9566ae;
-
-}
-
-
-.hero p {
-
-    margin: 25px 0;
-
-    color: #68766d;
-
-    line-height: 1.9;
-
-    font-size: 17px;
-
-}
-
-
-/* =========================
-   BUTTON
-========================= */
-
-.button {
-
-    display: inline-block;
-
-    padding: 13px 28px;
-
-    margin-right: 10px;
-
-    border-radius: 30px;
+    color: #07100c;
 
     text-decoration: none;
 
-    background: #315c45;
-
-    color: white;
+    font-weight: 600;
 
     transition: 0.3s;
 
@@ -254,229 +238,74 @@ nav a:hover {
 
 .button:hover {
 
-    background: #9566ae;
-
-    transform: translateY(-4px);
-
-}
-
-
-.button-outline {
-
-    background: transparent;
-
-    border: 1px solid #315c45;
-
-    color: #315c45;
-
-}
-
-
-/* =========================
-   DNA SCIENCE ART
-========================= */
-
-.science-art {
-
-    position: relative;
-
-    width: 380px;
-
-    height: 450px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-}
-
-
-.dna {
-
-    position: relative;
-
-    width: 180px;
-
-    height: 390px;
-
-    transform: rotate(-10deg);
-
-}
-
-
-.dna::before,
-
-.dna::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 25px;
-
-    height: 25px;
-
-    border-radius: 50%;
-
-    background: #9566ae;
+    transform: translateY(-5px);
 
     box-shadow:
 
-        0 60px #5d9271,
+        0 10px 30px
 
-        0 120px #9566ae,
-
-        0 180px #5d9271,
-
-        0 240px #9566ae,
-
-        0 300px #5d9271;
-
-}
-
-
-.dna::before {
-
-    left: 20px;
-
-}
-
-
-.dna::after {
-
-    right: 20px;
-
-    background: #5d9271;
-
-}
-
-
-.dna span {
-
-    position: absolute;
-
-    left: 40px;
-
-    width: 100px;
-
-    height: 4px;
-
-    background: #b7cdbb;
-
-}
-
-
-.dna span:nth-child(1) {
-
-    top: 30px;
-
-    transform: rotate(20deg);
-
-}
-
-
-.dna span:nth-child(2) {
-
-    top: 90px;
-
-    transform: rotate(-20deg);
-
-}
-
-
-.dna span:nth-child(3) {
-
-    top: 150px;
-
-    transform: rotate(20deg);
-
-}
-
-
-.dna span:nth-child(4) {
-
-    top: 210px;
-
-    transform: rotate(-20deg);
-
-}
-
-
-.dna span:nth-child(5) {
-
-    top: 270px;
-
-    transform: rotate(20deg);
-
-}
-
-
-.dna span:nth-child(6) {
-
-    top: 330px;
-
-    transform: rotate(-20deg);
-
-}
-
-
-.floating {
-
-    position: absolute;
-
-    font-size: 45px;
-
-    animation: float 4s ease-in-out infinite;
-
-}
-
-
-.cell {
-
-    top: 20px;
-
-    right: 0;
-
-}
-
-
-.leaf {
-
-    bottom: 20px;
-
-    left: 0;
-
-}
-
-
-@keyframes float {
-
-    0%,
-
-    100% {
-
-        transform: translateY(0);
-
-    }
-
-    50% {
-
-        transform: translateY(-20px);
-
-    }
+        rgba(101, 230, 161, 0.3);
 
 }
 
 
 /* =========================
-   SECTION
+   รูปหลัก
 ========================= */
 
-section {
+.hero-image {
 
-    padding: 100px 10%;
+    width: 380px;
+
+    height: 380px;
+
+    padding: 8px;
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #65e6a1,
+
+            #a879ff
+
+        );
+
+    box-shadow:
+
+        0 0 60px
+
+        rgba(168, 121, 255, 0.25);
+
+}
+
+
+.hero-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 8px solid #07100c;
+
+}
+
+
+/* =========================
+   ส่วนแกลเลอรี
+========================= */
+
+.gallery-section {
+
+    padding: 110px 8%;
 
 }
 
@@ -492,20 +321,144 @@ section {
 
 .section-title h2 {
 
-    font-family: 'Kanit', sans-serif;
-
     font-size: 45px;
 
-    color: #315c45;
+    margin-top: 10px;
 
 }
 
 
-.section-title p {
+.section-title h2 span {
 
-    margin-top: 10px;
+    color: #65e6a1;
 
-    color: #7b887e;
+}
+
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns:
+
+        repeat(
+
+            auto-fit,
+
+            minmax(260px, 1fr)
+
+        );
+
+    gap: 25px;
+
+}
+
+
+/* =========================
+   การ์ดรูปภาพ
+========================= */
+
+.photo-card {
+
+    position: relative;
+
+    height: 360px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid
+
+        rgba(101, 230, 161, 0.2);
+
+    transition: 0.4s;
+
+}
+
+
+.photo-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: #a879ff;
+
+    box-shadow:
+
+        0 15px 40px
+
+        rgba(168, 121, 255, 0.25);
+
+}
+
+
+.photo-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+
+}
+
+
+.photo-card:hover img {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =========================
+   ข้อความบนรูป
+========================= */
+
+.caption {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    padding: 30px 20px 20px;
+
+    background:
+
+        linear-gradient(
+
+            transparent,
+
+            rgba(0, 0, 0, 0.9)
+
+        );
+
+}
+
+
+.caption h3 {
+
+    color: #65e6a1;
+
+    font-size: 22px;
+
+}
+
+
+.caption p {
+
+    color: #dddddd;
+
+    font-size: 14px;
+
+    margin-top: 5px;
 
 }
 
@@ -516,321 +469,36 @@ section {
 
 .about {
 
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 50px;
-
-    align-items: center;
-
-}
-
-
-.profile-box {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 25px;
-
-    padding: 30px;
-
-    background: white;
-
-    border-radius: 25px;
-
-    box-shadow:
-
-        0 15px 35px
-
-        rgba(49, 92, 69, 0.08);
-
-}
-
-
-.profile-box img {
-
-    width: 140px;
-
-    height: 140px;
-
-    border-radius: 50%;
-
-    object-fit: cover;
-
-    border: 5px solid #eadff0;
-
-}
-
-
-.profile-box h3 {
-
-    color: #315c45;
-
-    margin-bottom: 10px;
-
-}
-
-
-.profile-box p {
-
-    color: #758178;
-
-    line-height: 1.8;
-
-}
-
-
-/* =========================
-   SKILLS
-========================= */
-
-.skills {
-
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 18px;
-
-}
-
-
-.skill {
-
-    padding: 25px;
+    padding: 110px 8%;
 
     text-align: center;
 
-    background: #edf5ef;
+    background:
 
-    border-radius: 18px;
+        linear-gradient(
 
-    transition: 0.3s;
+            135deg,
 
-}
+            rgba(101, 230, 161, 0.05),
 
+            rgba(168, 121, 255, 0.08)
 
-.skill:hover {
-
-    transform: translateY(-8px);
-
-    background: #eadff0;
+        );
 
 }
 
 
-.skill-icon {
+.about > p {
 
-    font-size: 38px;
+    max-width: 750px;
 
-}
+    margin: auto;
 
+    color: #c5cec8;
 
-.skill strong {
+    font-size: 18px;
 
-    display: block;
-
-    margin-top: 8px;
-
-    color: #315c45;
-
-}
-
-
-/* =========================
-   WORKS
-========================= */
-
-.works {
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 28px;
-
-}
-
-
-.work-card {
-
-    overflow: hidden;
-
-    background: white;
-
-    border-radius: 22px;
-
-    box-shadow:
-
-        0 12px 30px
-
-        rgba(49, 92, 69, 0.09);
-
-    transition: 0.4s;
-
-}
-
-
-.work-card:hover {
-
-    transform: translateY(-12px);
-
-    box-shadow:
-
-        0 20px 40px
-
-        rgba(49, 92, 69, 0.18);
-
-}
-
-
-.work-card img {
-
-    width: 100%;
-
-    height: 230px;
-
-    object-fit: cover;
-
-    display: block;
-
-}
-
-
-.work-content {
-
-    padding: 25px;
-
-}
-
-
-.work-content h3 {
-
-    margin-bottom: 12px;
-
-    color: #315c45;
-
-}
-
-
-.work-content p {
-
-    color: #78847b;
-
-    line-height: 1.8;
-
-    font-size: 14px;
-
-}
-
-
-.tag {
-
-    display: inline-block;
-
-    margin-top: 15px;
-
-    padding: 6px 14px;
-
-    border-radius: 20px;
-
-    background: #eadff0;
-
-    color: #754c89;
-
-    font-size: 12px;
-
-}
-
-
-/* =========================
-   GALLERY
-========================= */
-
-.gallery {
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 18px;
-
-}
-
-
-.gallery img {
-
-    width: 100%;
-
-    height: 220px;
-
-    object-fit: cover;
-
-    border-radius: 18px;
-
-    cursor: pointer;
-
-    transition: 0.4s;
-
-}
-
-
-.gallery img:hover {
-
-    transform: scale(1.04);
-
-    box-shadow:
-
-        0 12px 25px
-
-        rgba(49, 92, 69, 0.2);
-
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact {
-
-    text-align: center;
-
-    background: #315c45;
-
-    color: white;
-
-}
-
-
-.contact h2 {
-
-    font-family: 'Kanit', sans-serif;
-
-    font-size: 42px;
-
-    margin-bottom: 15px;
-
-}
-
-
-.contact p {
-
-    color: #dce8df;
-
-    margin-bottom: 25px;
-
-}
-
-
-.contact .button {
-
-    background: white;
-
-    color: #315c45;
+    line-height: 2;
 
 }
 
@@ -841,95 +509,87 @@ section {
 
 footer {
 
-    padding: 20px;
-
     text-align: center;
 
-    background: #203a29;
+    padding: 35px;
 
-    color: #d3dfd5;
+    color: #89958d;
 
-    font-size: 13px;
+    border-top: 1px solid
+
+        rgba(255, 255, 255, 0.1);
 
 }
 
 
 /* =========================
-   RESPONSIVE
+   หน้าจอมือถือ
 ========================= */
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
 
 
-    nav ul {
+    nav {
 
-        display: none;
+        padding: 15px 5%;
+
+    }
+
+
+    .menu {
+
+        gap: 10px;
+
+    }
+
+
+    .menu a {
+
+        font-size: 13px;
 
     }
 
 
     .hero {
 
-        flex-direction: column;
+        flex-direction: column-reverse;
 
         text-align: center;
 
-    }
-
-
-    .about {
-
-        grid-template-columns: 1fr;
+        padding-top: 130px;
 
     }
 
 
-    .works {
+    .hero-image {
 
-        grid-template-columns: 1fr;
+        width: 270px;
 
-    }
-
-
-    .gallery {
-
-        grid-template-columns: repeat(2, 1fr);
+        height: 270px;
 
     }
 
 
-    .profile-box {
+    .gallery-section {
 
-        flex-direction: column;
+        padding: 80px 5%;
 
-        text-align: center;
+    }
+
+
+    .section-title h2 {
+
+        font-size: 36px;
+
+    }
+
+
+    .photo-card {
+
+        height: 330px;
 
     }
 
 }
+```
 
-
-@media (max-width: 500px) {
-
-
-    .gallery {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .hero h1 {
-
-        font-size: 48px;
-
-    }
-
-
-    .science-art {
-
-        transform: scale(0.8);
-
-    }
-
-}
