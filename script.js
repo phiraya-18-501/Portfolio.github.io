@@ -1,136 +1,73 @@
-```javascript id="f32s9p"
-// =========================
-// เลื่อนหน้าแบบนุ่มนวล
-// =========================
+```javascript
+/* =========================
+   เปิดรูป Portfolio
+========================= */
 
-document.querySelectorAll('.menu a').forEach(function(link) {
+function openImage(imageName) {
 
-    link.addEventListener('click', function(event) {
+    const modal = document.getElementById("imageModal");
 
-        event.preventDefault();
+    const bigImage = document.getElementById("bigImage");
 
-        const targetId = this.getAttribute('href');
 
-        const targetSection = document.querySelector(targetId);
+    // ใส่ชื่อรูปที่กดลงในหน้าต่างใหญ่
 
-        if (targetSection) {
+    bigImage.src = imageName;
 
-            targetSection.scrollIntoView({
 
-                behavior: 'smooth',
+    // แสดงหน้าต่างรูปใหญ่
 
-                block: 'start'
+    modal.style.display = "flex";
 
-            });
+
+    // ป้องกันการเลื่อนหน้าเว็บตอนดูรูป
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+/* =========================
+   ปิดรูป Portfolio
+========================= */
+
+function closeImage() {
+
+    const modal = document.getElementById("imageModal");
+
+
+    // ซ่อนหน้าต่างรูปใหญ่
+
+    modal.style.display = "none";
+
+
+    // เปิดการเลื่อนหน้าเว็บกลับมา
+
+    document.body.style.overflow = "auto";
+
+}
+
+
+/* =========================
+   กดปุ่ม ESC เพื่อปิดรูป
+========================= */
+
+document.addEventListener(
+
+    "keydown",
+
+    function(event) {
+
+
+        if (event.key === "Escape") {
+
+
+            closeImage();
+
 
         }
 
-    });
-
-});
-
-
-// =========================
-// เอฟเฟกต์เมื่อเลื่อนถึงแต่ละหน้า
-// =========================
-
-const pages = document.querySelectorAll('.portfolio-page');
-
-
-const observer = new IntersectionObserver(
-
-    function(entries) {
-
-        entries.forEach(function(entry) {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add('active');
-
-            }
-
-        });
-
-    },
-
-    {
-
-        threshold: 0.25
-
     }
 
 );
-
-
-pages.forEach(function(page) {
-
-    observer.observe(page);
-
-});
-
-
-// =========================
-// เปลี่ยนสี Navbar เมื่อเลื่อน
-// =========================
-
-const navbar = document.querySelector('.navbar');
-
-
-window.addEventListener('scroll', function() {
-
-    if (window.scrollY > 50) {
-
-        navbar.classList.add('scrolled');
-
-    } else {
-
-        navbar.classList.remove('scrolled');
-
-    }
-
-});
-
-
-// =========================
-// กดรูปเพื่อขยาย
-// =========================
-
-const portfolioImages = document.querySelectorAll(
-
-    '.portfolio-page img'
-
-);
-
-
-portfolioImages.forEach(function(image) {
-
-    image.addEventListener('click', function() {
-
-
-        const overlay = document.createElement('div');
-
-        overlay.className = 'image-modal';
-
-
-        const bigImage = document.createElement('img');
-
-        bigImage.src = this.src;
-
-
-        overlay.appendChild(bigImage);
-
-
-        document.body.appendChild(overlay);
-
-
-        overlay.addEventListener('click', function() {
-
-            overlay.remove();
-
-        });
-
-
-    });
-
-});
 ```
