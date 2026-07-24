@@ -1,73 +1,51 @@
-```javascript
-/* =========================
-   เปิดรูป Portfolio
-========================= */
+// =========================
+// เปิดรูปใหญ่
+// =========================
 
 function openImage(imageName) {
 
     const modal = document.getElementById("imageModal");
-
     const bigImage = document.getElementById("bigImage");
 
-
-    // ใส่ชื่อรูปที่กดลงในหน้าต่างใหญ่
-
+    // ใส่ path รูป
     bigImage.src = imageName;
 
-
-    // แสดงหน้าต่างรูปใหญ่
-
+    // แสดง modal
     modal.style.display = "flex";
 
-
-    // ป้องกันการเลื่อนหน้าเว็บตอนดูรูป
-
+    // ป้องกันการเลื่อนหน้าเว็บ
     document.body.style.overflow = "hidden";
 
 }
 
 
-/* =========================
-   ปิดรูป Portfolio
-========================= */
+// =========================
+// ปิดรูปใหญ่
+// =========================
 
 function closeImage() {
 
     const modal = document.getElementById("imageModal");
 
-
-    // ซ่อนหน้าต่างรูปใหญ่
-
+    // ซ่อน modal
     modal.style.display = "none";
 
-
-    // เปิดการเลื่อนหน้าเว็บกลับมา
-
+    // เปิดการเลื่อนหน้าเว็บ
     document.body.style.overflow = "auto";
 
 }
 
 
-/* =========================
-   กดปุ่ม ESC เพื่อปิดรูป
-========================= */
+// =========================
+// กด ESC เพื่อปิด
+// =========================
 
-document.addEventListener(
+document.addEventListener("keydown", function(event) {
 
-    "keydown",
+    if (event.key === "Escape") {
 
-    function(event) {
-
-
-        if (event.key === "Escape") {
-
-
-            closeImage();
-
-
-        }
+        closeImage();
 
     }
 
-);
-```
+});
