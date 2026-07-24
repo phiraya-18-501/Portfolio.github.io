@@ -1,177 +1,318 @@
-```html
 <!DOCTYPE html>
 <html lang="th">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Portfolio</title>
+    <title>Portfolio | ภิรญา ไตรรัตจิต</title>
 
-    <!-- เชื่อม CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
+    <!-- =========================
+         หน้าเปิดเว็บไซต์
+    ========================== -->
 
-    <!-- เมนูด้านบน -->
+    <section class="intro">
 
-    <nav class="navbar">
+        <div class="intro-content">
 
-        <div class="logo">
+            <p class="small-text">
+                WELCOME TO MY
+            </p>
 
-            BIO<span>•</span>PORTFOLIO
+            <h1>
+                PORTFOLIO
+            </h1>
+
+            <h2>
+                สวัสดีค่ะ
+            </h2>
+
+            <p class="name">
+                ดิฉันนางสาวภิรญา ไตรรัตจิต
+            </p>
+
+            <p class="welcome">
+                ยินดีต้อนรับเข้าสู่ Portfolio Website ของดิฉัน
+            </p>
+
+            <a href="#portfolio" class="start-button">
+                เริ่มชม Portfolio ↓
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ส่วน Portfolio
+    ========================== -->
+
+    <main id="portfolio">
+
+        <div class="portfolio-title">
+
+            <p>MY PORTFOLIO</p>
+
+            <h2>
+                Explore My Journey
+            </h2>
+
+            <span>
+                เลือกดูแต่ละหน้า Portfolio ได้เลย
+            </span>
 
         </div>
 
 
-        <div class="menu">
+        <div class="portfolio-grid">
 
-            <a href="#cover">หน้าปก</a>
 
-            <a href="#sop">SOP</a>
+            <!-- ปก -->
 
-            <a href="#profile">ประวัติ</a>
+            <div class="portfolio-card"
+                 onclick="openImage('ปก.jpg')">
 
-            <a href="#education">การศึกษา</a>
+                <img src="ปก.jpg">
 
-            <a href="#projects">ผลงาน</a>
+                <div class="card-text">
 
-            <a href="#activities">กิจกรรม</a>
+                    <h3>หน้าปก</h3>
 
-            <a href="#certificates">เกียรติบัตร</a>
+                    <p>Cover</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SOP -->
+
+            <div class="portfolio-card"
+                 onclick="openImage('SOP.jpg')">
+
+                <img src="SOP.jpg">
+
+                <div class="card-text">
+
+                    <h3>SOP</h3>
+
+                    <p>Statement of Purpose</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ประวัติส่วนตัว -->
+
+            <div class="portfolio-card"
+                 onclick="openImage('ประวัติส่วนตัว.jpg')">
+
+                <img src="ประวัติส่วนตัว.jpg">
+
+                <div class="card-text">
+
+                    <h3>ประวัติส่วนตัว</h3>
+
+                    <p>Personal Profile</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ประวัติการศึกษา -->
+
+            <div class="portfolio-card"
+                 onclick="openImage('ประวัติการศึกษา.jpg')">
+
+                <img src="ประวัติการศึกษา.jpg">
+
+                <div class="card-text">
+
+                    <h3>ประวัติการศึกษา</h3>
+
+                    <p>Education</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ผลงาน 1 -->
+
+            <div class="portfolio-card"
+                 onclick="openImage('ผลงาน1.jpg')">
+
+                <img src="ผลงาน1.jpg">
+
+                <div class="card-text">
+
+                    <h3>ผลงานที่ 1</h3>
+
+                    <p>Project 01</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ผลงาน 2 -->
+
+            <div class="portfolio-card"
+                 onclick="openImage('ผลงาน2.jpg')">
+
+                <img src="ผลงาน2.jpg">
+
+                <div class="card-text">
+
+                    <h3>ผลงานที่ 2</h3>
+
+                    <p>Project 02</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ผลงาน 3 -->
+
+            <div class="portfolio-card"
+                 onclick="openImage('ผลงาน3.jpg')">
+
+                <img src="ผลงาน3.jpg">
+
+                <div class="card-text">
+
+                    <h3>ผลงานที่ 3</h3>
+
+                    <p>Project 03</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- กิจกรรม 1 -->
+
+            <div class="portfolio-card"
+                 onclick="openImage('กิจกรรม1.jpg')">
+
+                <img src="กิจกรรม1.jpg">
+
+                <div class="card-text">
+
+                    <h3>กิจกรรมที่ 1</h3>
+
+                    <p>Activity 01</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- กิจกรรม 2 -->
+
+            <div class="portfolio-card"
+                 onclick="openImage('กิจกรรม2.jpg')">
+
+                <img src="กิจกรรม2.jpg">
+
+                <div class="card-text">
+
+                    <h3>กิจกรรมที่ 2</h3>
+
+                    <p>Activity 02</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- เกียรติบัตร 1 -->
+
+            <div class="portfolio-card"
+                 onclick="openImage('เกียรติบัตร1.jpg')">
+
+                <img src="เกียรติบัตร1.jpg">
+
+                <div class="card-text">
+
+                    <h3>เกียรติบัตรที่ 1</h3>
+
+                    <p>Certificate 01</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- เกียรติบัตร 2 -->
+
+            <div class="portfolio-card"
+                 onclick="openImage('เกียรติบัตร2.jpg')">
+
+                <img src="เกียรติบัตร2.jpg">
+
+                <div class="card-text">
+
+                    <h3>เกียรติบัตรที่ 2</h3>
+
+                    <p>Certificate 02</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- หน้าปิด -->
+
+            <div class="portfolio-card"
+                 onclick="openImage('ปิด.jpg')">
+
+                <img src="ปิด.jpg">
+
+                <div class="card-text">
+
+                    <h3>หน้าปิด</h3>
+
+                    <p>Thank You</p>
+
+                </div>
+
+            </div>
+
 
         </div>
 
-    </nav>
+    </main>
 
 
     <!-- =========================
-         หน้าปก
-    ========================= -->
+         หน้าดูรูปใหญ่
+    ========================== -->
 
-    <section class="portfolio-page cover-page" id="cover">
+    <div id="imageModal"
+         class="modal"
+         onclick="closeImage()">
 
-        <img src="ปก.jpg" alt="หน้าปก Portfolio">
+        <span class="close">
+            ×
+        </span>
 
-    </section>
+        <img id="bigImage">
 
+    </div>
 
-    <!-- =========================
-         SOP
-    ========================= -->
-
-    <section class="portfolio-page" id="sop">
-
-        <img src="SOP.jpg" alt="Statement of Purpose">
-
-    </section>
-
-
-    <!-- =========================
-         ประวัติส่วนตัว
-    ========================= -->
-
-    <section class="portfolio-page" id="profile">
-
-        <img src="ประวัติส่วนตัว.jpg" alt="ประวัติส่วนตัว">
-
-    </section>
-
-
-    <!-- =========================
-         ประวัติการศึกษา
-    ========================= -->
-
-    <section class="portfolio-page" id="education">
-
-        <img src="ประวัติการศึกษา.jpg" alt="ประวัติการศึกษา">
-
-    </section>
-
-
-    <!-- =========================
-         ผลงาน
-    ========================= -->
-
-    <section class="portfolio-page" id="projects">
-
-        <img src="ผลงาน1.jpg" alt="ผลงานที่ 1">
-
-    </section>
-
-
-    <section class="portfolio-page">
-
-        <img src="ผลงาน2.jpg" alt="ผลงานที่ 2">
-
-    </section>
-
-
-    <section class="portfolio-page">
-
-        <img src="ผลงาน3.jpg" alt="ผลงานที่ 3">
-
-    </section>
-
-
-    <!-- =========================
-         กิจกรรม
-    ========================= -->
-
-    <section class="portfolio-page" id="activities">
-
-        <img src="กิจกรรม1.jpg" alt="กิจกรรมที่ 1">
-
-    </section>
-
-
-    <section class="portfolio-page">
-
-        <img src="กิจกรรม2.jpg" alt="กิจกรรมที่ 2">
-
-    </section>
-
-
-    <!-- =========================
-         เกียรติบัตร
-    ========================= -->
-
-    <section class="portfolio-page" id="certificates">
-
-        <img src="เกียรติบัตร1.jpg" alt="เกียรติบัตรที่ 1">
-
-    </section>
-
-
-    <section class="portfolio-page">
-
-        <img src="เกียรติบัตร2.jpg" alt="เกียรติบัตรที่ 2">
-
-    </section>
-
-
-    <!-- =========================
-         หน้าปิด
-    ========================= -->
-
-    <section class="portfolio-page end-page">
-
-        <img src="ปิด.jpg" alt="หน้าปิด Portfolio">
-
-    </section>
-
-
-    <!-- เชื่อม JavaScript -->
 
     <script src="script.js"></script>
 
 </body>
 
 </html>
-```
