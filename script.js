@@ -1,23 +1,25 @@
-```javascript
-/* =========================
-   SMOOTH SCROLL
-========================= */
+```javascript id="f32s9p"
+// =========================
+// เลื่อนหน้าแบบนุ่มนวล
+// =========================
 
-document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+document.querySelectorAll('.menu a').forEach(function(link) {
 
     link.addEventListener('click', function(event) {
 
         event.preventDefault();
 
-        const target = document.querySelector(
-            this.getAttribute('href')
-        );
+        const targetId = this.getAttribute('href');
 
-        if (target) {
+        const targetSection = document.querySelector(targetId);
 
-            target.scrollIntoView({
+        if (targetSection) {
 
-                behavior: 'smooth'
+            targetSection.scrollIntoView({
+
+                behavior: 'smooth',
+
+                block: 'start'
 
             });
 
@@ -28,54 +30,11 @@ document.querySelectorAll('a[href^="#"]').forEach(function(link) {
 });
 
 
-/* =========================
-   กดรูปเพื่อดูภาพขนาดใหญ่
-========================= */
+// =========================
+// เอฟเฟกต์เมื่อเลื่อนถึงแต่ละหน้า
+// =========================
 
-const images = document.querySelectorAll(
-    '.photo-card img, .hero-image img'
-);
-
-
-images.forEach(function(image) {
-
-    image.addEventListener('click', function() {
-
-        const overlay = document.createElement('div');
-
-        overlay.className = 'image-overlay';
-
-
-        const largeImage = document.createElement('img');
-
-        largeImage.src = this.src;
-
-
-        overlay.appendChild(largeImage);
-
-        document.body.appendChild(overlay);
-
-
-        /* กดที่พื้นหลังเพื่อปิด */
-
-        overlay.addEventListener('click', function() {
-
-            overlay.remove();
-
-        });
-
-    });
-
-});
-
-
-/* =========================
-   แสดงการ์ดเมื่อเลื่อนหน้าจอ
-========================= */
-
-const cards = document.querySelectorAll(
-    '.photo-card'
-);
+const pages = document.querySelectorAll('.portfolio-page');
 
 
 const observer = new IntersectionObserver(
@@ -86,9 +45,7 @@ const observer = new IntersectionObserver(
 
             if (entry.isIntersecting) {
 
-                entry.target.classList.add(
-                    'show'
-                );
+                entry.target.classList.add('active');
 
             }
 
@@ -98,37 +55,82 @@ const observer = new IntersectionObserver(
 
     {
 
-        threshold: 0.15
+        threshold: 0.25
 
     }
 
 );
 
 
-cards.forEach(function(card) {
+pages.forEach(function(page) {
 
-    observer.observe(card);
+    observer.observe(page);
 
 });
 
 
-/* =========================
-   เอฟเฟกต์เลื่อนเมนู
-========================= */
+// =========================
+// เปลี่ยนสี Navbar เมื่อเลื่อน
+// =========================
+
+const navbar = document.querySelector('.navbar');
+
 
 window.addEventListener('scroll', function() {
 
-    const nav = document.querySelector('nav');
-
     if (window.scrollY > 50) {
 
-        nav.classList.add('scrolled');
+        navbar.classList.add('scrolled');
 
     } else {
 
-        nav.classList.remove('scrolled');
+        navbar.classList.remove('scrolled');
 
     }
+
+});
+
+
+// =========================
+// กดรูปเพื่อขยาย
+// =========================
+
+const portfolioImages = document.querySelectorAll(
+
+    '.portfolio-page img'
+
+);
+
+
+portfolioImages.forEach(function(image) {
+
+    image.addEventListener('click', function() {
+
+
+        const overlay = document.createElement('div');
+
+        overlay.className = 'image-modal';
+
+
+        const bigImage = document.createElement('img');
+
+        bigImage.src = this.src;
+
+
+        overlay.appendChild(bigImage);
+
+
+        document.body.appendChild(overlay);
+
+
+        overlay.addEventListener('click', function() {
+
+            overlay.remove();
+
+        });
+
+
+    });
 
 });
 ```
