@@ -1,542 +1,83 @@
+```html
 <!DOCTYPE html>
 <html lang="th">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Biology Portfolio</title>
+    <title>My Nature Portfolio</title>
 
     <!-- เชื่อมไฟล์ CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
-
-    <!-- =========================
-         NAVBAR
-    ========================== -->
-
+    <!-- เมนูด้านบน -->
     <nav>
-
         <div class="logo">
-
-            BIO<span>PORTFOLIO</span>
-
+            BIO<span>•</span>GALLERY
         </div>
 
-
-        <ul>
-
-            <li>
-                <a href="#home">หน้าแรก</a>
-            </li>
-
-            <li>
-                <a href="#about">เกี่ยวกับฉัน</a>
-            </li>
-
-            <li>
-                <a href="#works">ผลงาน</a>
-            </li>
-
-            <li>
-                <a href="#gallery">แกลเลอรี</a>
-            </li>
-
-        </ul>
-
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+        </div>
     </nav>
 
 
-    <!-- =========================
-         HERO SECTION
-    ========================== -->
-
+    <!-- หน้าแรก -->
     <section class="hero" id="home">
-
 
         <div class="hero-text">
 
-
-            <div class="badge">
-
-                🔬 BIOLOGY • SCIENCE • DISCOVERY
-
-            </div>
-
+            <p class="subtitle">
+                🌿 SCIENCE • NATURE • DISCOVERY
+            </p>
 
             <h1>
-
-                Discover the
-
-                <br>
-
-                <span>Beauty of Life</span>
-
+                Explore<br>
+                <span>Life & Nature</span>
             </h1>
 
-
-            <p>
-
-                พื้นที่รวบรวมผลงาน ความสนใจ
-                และประสบการณ์ด้านวิทยาศาสตร์
-                เพื่อก้าวเข้าสู่เส้นทางแห่งการค้นพบ
-                ในโลกของชีววิทยา
-
+            <p class="description">
+                พื้นที่รวบรวมภาพผลงาน การเรียนรู้
+                และความสนใจด้านวิทยาศาสตร์ ชีววิทยา
+                และธรรมชาติ
             </p>
 
-
-            <a href="#works" class="button">
-
-                ชมผลงาน
-
+            <a href="#gallery" class="button">
+                ดูแกลเลอรี →
             </a>
 
-
-            <a href="#about" class="button button-outline">
-
-                เกี่ยวกับฉัน
-
-            </a>
-
-
         </div>
 
 
-        <!-- ส่วนตกแต่งแนววิทยาศาสตร์ -->
+        <!-- รูปหลัก -->
+        <div class="hero-image">
 
-        <div class="science-art">
-
-
-            <div class="dna">
-
-                <span></span>
-
-                <span></span>
-
-                <span></span>
-
-                <span></span>
-
-                <span></span>
-
-                <span></span>
-
-            </div>
-
-
-            <div class="floating cell">
-
-                🧫
-
-            </div>
-
-
-            <div class="floating leaf">
-
-                🌿
-
-            </div>
-
+            <!-- เปลี่ยนชื่อไฟล์ตรงนี้เป็นรูปที่มีอยู่ใน GitHub -->
+            <img src="ชื่อไฟล์รูปหลัก.jpg" alt="Nature">
 
         </div>
-
 
     </section>
 
 
-    <!-- =========================
-         ABOUT ME
-    ========================== -->
-
-    <section id="about">
-
+    <!-- ส่วนแกลเลอรี 12 รูป -->
+    <section class="gallery-section" id="gallery">
 
         <div class="section-title">
 
-
-            <h2>
-
-                About Me
-
-            </h2>
-
-
-            <p>
-
-                นักเรียนผู้หลงใหลในการค้นพบความมหัศจรรย์ของสิ่งมีชีวิต
-
+            <p class="subtitle">
+                MY COLLECTION
             </p>
 
-
-        </div>
-
-
-        <div class="about">
-
-
-            <!-- รูปโปรไฟล์ -->
-
-            <div class="profile-box">
-
-
-                <img
-
-                    src="images/profile.jpg"
-
-                    alt="รูปโปรไฟล์"
-
-                >
-
-
-                <div>
-
-
-                    <h3>
-
-                        นางสาวภิรญา ไตรรัตจิต
-
-                    </h3>
-
-
-                    <p>
-
-                        นักเรียนชั้นมัธยมศึกษาปีที่ 6
-
-                        <br>
-
-                        ผู้สนใจด้านชีววิทยา วิทยาศาสตร์
-
-                        และการวิจัย
-
-                    </p>
-
-
-                </div>
-
-
-            </div>
-
-
-            <!-- ความสนใจ -->
-
-            <div class="skills">
-
-
-                <div class="skill">
-
-                    <div class="skill-icon">
-
-                        🔬
-
-                    </div>
-
-
-                    <strong>
-
-                        การทดลอง
-
-                    </strong>
-
-
-                    <small>
-
-                        Experiment
-
-                    </small>
-
-                </div>
-
-
-                <div class="skill">
-
-                    <div class="skill-icon">
-
-                        🧬
-
-                    </div>
-
-
-                    <strong>
-
-                        ชีววิทยา
-
-                    </strong>
-
-
-                    <small>
-
-                        Biology
-
-                    </small>
-
-                </div>
-
-
-                <div class="skill">
-
-                    <div class="skill-icon">
-
-                        🧪
-
-                    </div>
-
-
-                    <strong>
-
-                        การวิจัย
-
-                    </strong>
-
-
-                    <small>
-
-                        Research
-
-                    </small>
-
-                </div>
-
-
-                <div class="skill">
-
-                    <div class="skill-icon">
-
-                        🌱
-
-                    </div>
-
-
-                    <strong>
-
-                        สิ่งแวดล้อม
-
-                    </strong>
-
-
-                    <small>
-
-                        Environment
-
-                    </small>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-    <!-- =========================
-         MY WORKS
-    ========================== -->
-
-    <section id="works">
-
-
-        <div class="section-title">
-
-
             <h2>
-
-                My Scientific Works
-
+                Nature <span>Gallery</span>
             </h2>
-
-
-            <p>
-
-                พื้นที่สำหรับโชว์ผลงานด้านวิทยาศาสตร์และชีววิทยา
-
-            </p>
-
-
-        </div>
-
-
-        <div class="works">
-
-
-            <!-- ผลงานที่ 1 -->
-
-            <div class="work-card">
-
-
-                <img
-
-                    src="images/project1.jpg"
-
-                    alt="ผลงานไบโอพลาสติกจากเกล็ดปลา"
-
-                >
-
-
-                <div class="work-content">
-
-
-                    <h3>
-
-                        ไบโอพลาสติกจากเกล็ดปลา
-
-                    </h3>
-
-
-                    <p>
-
-                        โครงงานศึกษาการนำเกล็ดปลา
-                        ซึ่งเป็นวัสดุเหลือใช้
-                        มาพัฒนาเป็นวัสดุที่เป็นมิตร
-                        ต่อสิ่งแวดล้อม
-
-                    </p>
-
-
-                    <span class="tag">
-
-                        Biology Research
-
-                    </span>
-
-
-                </div>
-
-
-            </div>
-
-
-            <!-- ผลงานที่ 2 -->
-
-            <div class="work-card">
-
-
-                <img
-
-                    src="images/project2.jpg"
-
-                    alt="การทดลองทางวิทยาศาสตร์"
-
-                >
-
-
-                <div class="work-content">
-
-
-                    <h3>
-
-                        การทดลองทางวิทยาศาสตร์
-
-                    </h3>
-
-
-                    <p>
-
-                        การเรียนรู้ผ่านกระบวนการทดลอง
-                        การเก็บข้อมูล และการวิเคราะห์ผล
-                        อย่างเป็นระบบ
-
-                    </p>
-
-
-                    <span class="tag">
-
-                        Laboratory
-
-                    </span>
-
-
-                </div>
-
-
-            </div>
-
-
-            <!-- ผลงานที่ 3 -->
-
-            <div class="work-card">
-
-
-                <img
-
-                    src="images/project3.jpg"
-
-                    alt="โครงงานสิ่งแวดล้อม"
-
-                >
-
-
-                <div class="work-content">
-
-
-                    <h3>
-
-                        วิทยาศาสตร์และสิ่งแวดล้อม
-
-                    </h3>
-
-
-                    <p>
-
-                        การศึกษาวิทยาศาสตร์
-                        เพื่อสร้างความเข้าใจ
-                        และแนวทางการใช้ทรัพยากร
-                        อย่างยั่งยืน
-
-                    </p>
-
-
-                    <span class="tag">
-
-                        Environment
-
-                    </span>
-
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-    <!-- =========================
-         GALLERY
-    ========================== -->
-
-    <section id="gallery">
-
-
-        <div class="section-title">
-
-
-            <h2>
-
-                Scientific Gallery
-
-            </h2>
-
-
-            <p>
-
-                ภาพกิจกรรมและประสบการณ์การเรียนรู้
-
-            </p>
-
 
         </div>
 
@@ -544,103 +85,199 @@
         <div class="gallery">
 
 
-            <img
+            <!-- รูปที่ 1 -->
+            <div class="photo-card">
 
-                src="images/activity1.jpg"
+                <img src="ชื่อไฟล์รูปที่1.jpg" alt="รูปที่ 1">
 
-                alt="กิจกรรมวิทยาศาสตร์"
+                <div class="caption">
+                    <h3>Nature 01</h3>
+                    <p>ความงามของธรรมชาติ</p>
+                </div>
 
-            >
-
-
-            <img
-
-                src="images/activity2.jpg"
-
-                alt="กิจกรรมห้องปฏิบัติการ"
-
-            >
+            </div>
 
 
-            <img
+            <!-- รูปที่ 2 -->
+            <div class="photo-card">
 
-                src="images/activity3.jpg"
+                <img src="ชื่อไฟล์รูปที่2.jpg" alt="รูปที่ 2">
 
-                alt="กิจกรรมชีววิทยา"
+                <div class="caption">
+                    <h3>Nature 02</h3>
+                    <p>การค้นพบและการเรียนรู้</p>
+                </div>
 
-            >
+            </div>
 
 
-            <img
+            <!-- รูปที่ 3 -->
+            <div class="photo-card">
 
-                src="images/project1.jpg"
+                <img src="ชื่อไฟล์รูปที่3.jpg" alt="รูปที่ 3">
 
-                alt="โครงงานวิทยาศาสตร์"
+                <div class="caption">
+                    <h3>Biology 03</h3>
+                    <p>โลกของสิ่งมีชีวิต</p>
+                </div>
 
-            >
+            </div>
+
+
+            <!-- รูปที่ 4 -->
+            <div class="photo-card">
+
+                <img src="ชื่อไฟล์รูปที่4.jpg" alt="รูปที่ 4">
+
+                <div class="caption">
+                    <h3>Biology 04</h3>
+                    <p>การทดลองทางชีววิทยา</p>
+                </div>
+
+            </div>
+
+
+            <!-- รูปที่ 5 -->
+            <div class="photo-card">
+
+                <img src="ชื่อไฟล์รูปที่5.jpg" alt="รูปที่ 5">
+
+                <div class="caption">
+                    <h3>Science 05</h3>
+                    <p>วิทยาศาสตร์และการทดลอง</p>
+                </div>
+
+            </div>
+
+
+            <!-- รูปที่ 6 -->
+            <div class="photo-card">
+
+                <img src="ชื่อไฟล์รูปที่6.jpg" alt="รูปที่ 6">
+
+                <div class="caption">
+                    <h3>Science 06</h3>
+                    <p>การเรียนรู้จากการทดลอง</p>
+                </div>
+
+            </div>
+
+
+            <!-- รูปที่ 7 -->
+            <div class="photo-card">
+
+                <img src="ชื่อไฟล์รูปที่7.jpg" alt="รูปที่ 7">
+
+                <div class="caption">
+                    <h3>Environment 07</h3>
+                    <p>สิ่งแวดล้อมของเรา</p>
+                </div>
+
+            </div>
+
+
+            <!-- รูปที่ 8 -->
+            <div class="photo-card">
+
+                <img src="ชื่อไฟล์รูปที่8.jpg" alt="รูปที่ 8">
+
+                <div class="caption">
+                    <h3>Environment 08</h3>
+                    <p>การอนุรักษ์ธรรมชาติ</p>
+                </div>
+
+            </div>
+
+
+            <!-- รูปที่ 9 -->
+            <div class="photo-card">
+
+                <img src="ชื่อไฟล์รูปที่9.jpg" alt="รูปที่ 9">
+
+                <div class="caption">
+                    <h3>Life 09</h3>
+                    <p>ความหลากหลายของสิ่งมีชีวิต</p>
+                </div>
+
+            </div>
+
+
+            <!-- รูปที่ 10 -->
+            <div class="photo-card">
+
+                <img src="ชื่อไฟล์รูปที่10.jpg" alt="รูปที่ 10">
+
+                <div class="caption">
+                    <h3>Life 10</h3>
+                    <p>การสังเกตโลกของเรา</p>
+                </div>
+
+            </div>
+
+
+            <!-- รูปที่ 11 -->
+            <div class="photo-card">
+
+                <img src="ชื่อไฟล์รูปที่11.jpg" alt="รูปที่ 11">
+
+                <div class="caption">
+                    <h3>Discovery 11</h3>
+                    <p>การค้นพบสิ่งใหม่</p>
+                </div>
+
+            </div>
+
+
+            <!-- รูปที่ 12 -->
+            <div class="photo-card">
+
+                <img src="ชื่อไฟล์รูปที่12.jpg" alt="รูปที่ 12">
+
+                <div class="caption">
+                    <h3>Discovery 12</h3>
+                    <p>Explore • Learn • Discover</p>
+                </div>
+
+            </div>
 
 
         </div>
 
-
     </section>
 
 
-    <!-- =========================
-         CONTACT
-    ========================== -->
+    <!-- เกี่ยวกับฉัน -->
+    <section class="about" id="about">
 
-    <section class="contact">
+        <div class="section-title">
 
+            <h2>
+                About <span>Me</span>
+            </h2>
 
-        <h2>
-
-            Let's Discover Life Together
-
-        </h2>
-
+        </div>
 
         <p>
-
-            ทุกการค้นพบเริ่มต้นจากคำถามเล็ก ๆ
-
+            ฉันมีความสนใจในวิทยาศาสตร์ ชีววิทยา
+            และธรรมชาติ ชอบเรียนรู้ผ่านการทดลอง
+            การค้นคว้า และการสังเกตสิ่งต่าง ๆ รอบตัว 🌱
         </p>
-
-
-        <a
-
-            href="mailto:your@email.com"
-
-            class="button"
-
-        >
-
-            ติดต่อฉัน
-
-        </a>
-
 
     </section>
 
 
-    <!-- FOOTER -->
-
+    <!-- ส่วนท้ายเว็บไซต์ -->
     <footer>
 
-        © 2026 Biology Portfolio
-
-        <br>
-
-        Silpakorn University
+        © 2026 My Nature Gallery 🌿💜
 
     </footer>
 
 
     <!-- เชื่อมไฟล์ JavaScript -->
-
     <script src="script.js"></script>
-
 
 </body>
 
 </html>
+```
