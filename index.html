@@ -1,1 +1,1705 @@
+<!DOCTYPE html>
+<html lang="th">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biology Portfolio | Silpakorn University</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+
+        /* =========================
+           BODY
+        ========================== */
+
+        body {
+
+            font-family: 'Prompt', sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(152, 103, 179, 0.08),
+                    transparent 25%
+                ),
+
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(66, 130, 85, 0.08),
+                    transparent 25%
+                ),
+
+                #f7faf7;
+
+            color: #26372d;
+
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        nav {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            padding: 18px 8%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: rgba(255,255,255,0.9);
+
+            backdrop-filter: blur(15px);
+
+            z-index: 1000;
+
+            border-bottom: 1px solid #e0e9e1;
+
+        }
+
+
+        .logo {
+
+            font-family: 'Kanit', sans-serif;
+
+            font-size: 23px;
+
+            font-weight: 600;
+
+            color: #315c45;
+
+        }
+
+
+        .logo span {
+
+            color: #9566ae;
+
+        }
+
+
+        nav ul {
+
+            display: flex;
+
+            gap: 30px;
+
+            list-style: none;
+
+        }
+
+
+        nav ul li a {
+
+            text-decoration: none;
+
+            color: #536258;
+
+            transition: 0.3s;
+
+        }
+
+
+        nav ul li a:hover {
+
+            color: #9566ae;
+
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            padding: 140px 10% 80px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 60px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #f8fbf8,
+                    #edf5ef
+                );
+
+            overflow: hidden;
+
+        }
+
+
+        .hero-text {
+
+            max-width: 650px;
+
+        }
+
+
+        .small-title {
+
+            display: inline-block;
+
+            padding: 8px 18px;
+
+            border-radius: 30px;
+
+            background: #eadff0;
+
+            color: #754c89;
+
+            margin-bottom: 20px;
+
+            font-size: 14px;
+
+        }
+
+
+        .hero h1 {
+
+            font-family: 'Kanit', sans-serif;
+
+            font-size: clamp(45px, 7vw, 82px);
+
+            line-height: 1.05;
+
+            color: #315c45;
+
+        }
+
+
+        .hero h1 span {
+
+            color: #9566ae;
+
+        }
+
+
+        .hero p {
+
+            margin: 25px 0;
+
+            max-width: 600px;
+
+            color: #68766d;
+
+            line-height: 1.9;
+
+            font-size: 17px;
+
+        }
+
+
+        .button {
+
+            display: inline-block;
+
+            padding: 13px 28px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            background: #315c45;
+
+            color: white;
+
+            margin-right: 10px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .button:hover {
+
+            background: #9566ae;
+
+            transform: translateY(-4px);
+
+        }
+
+
+        .button-outline {
+
+            background: transparent;
+
+            border: 1px solid #315c45;
+
+            color: #315c45;
+
+        }
+
+
+        /* =========================
+           SCIENCE VISUAL
+        ========================== */
+
+        .science-visual {
+
+            position: relative;
+
+            width: 380px;
+
+            height: 450px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
+
+        .dna {
+
+            position: relative;
+
+            width: 180px;
+
+            height: 390px;
+
+            transform: rotate(-12deg);
+
+        }
+
+
+        .dna::before,
+        .dna::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 25px;
+
+            height: 25px;
+
+            border-radius: 50%;
+
+            background: #9566ae;
+
+            box-shadow:
+
+                0 60px #5d9271,
+
+                0 120px #9566ae,
+
+                0 180px #5d9271,
+
+                0 240px #9566ae,
+
+                0 300px #5d9271;
+
+        }
+
+
+        .dna::before {
+
+            left: 20px;
+
+        }
+
+
+        .dna::after {
+
+            right: 20px;
+
+            background: #5d9271;
+
+            box-shadow:
+
+                0 60px #9566ae,
+
+                0 120px #5d9271,
+
+                0 180px #9566ae,
+
+                0 240px #5d9271,
+
+                0 300px #9566ae;
+
+        }
+
+
+        .dna span {
+
+            position: absolute;
+
+            left: 40px;
+
+            width: 100px;
+
+            height: 4px;
+
+            background: #b8cdbb;
+
+        }
+
+
+        .dna span:nth-child(1) {
+
+            top: 30px;
+
+            transform: rotate(20deg);
+
+        }
+
+
+        .dna span:nth-child(2) {
+
+            top: 90px;
+
+            transform: rotate(-20deg);
+
+        }
+
+
+        .dna span:nth-child(3) {
+
+            top: 150px;
+
+            transform: rotate(20deg);
+
+        }
+
+
+        .dna span:nth-child(4) {
+
+            top: 210px;
+
+            transform: rotate(-20deg);
+
+        }
+
+
+        .dna span:nth-child(5) {
+
+            top: 270px;
+
+            transform: rotate(20deg);
+
+        }
+
+
+        .dna span:nth-child(6) {
+
+            top: 330px;
+
+            transform: rotate(-20deg);
+
+        }
+
+
+        .floating {
+
+            position: absolute;
+
+            font-size: 45px;
+
+            animation: floating 4s ease-in-out infinite;
+
+        }
+
+
+        .cell {
+
+            top: 20px;
+
+            right: 10px;
+
+        }
+
+
+        .leaf {
+
+            bottom: 20px;
+
+            left: 10px;
+
+        }
+
+
+        @keyframes floating {
+
+            0%, 100% {
+
+                transform: translateY(0);
+
+            }
+
+            50% {
+
+                transform: translateY(-20px);
+
+            }
+
+        }
+
+
+        /* =========================
+           SECTION
+        ========================== */
+
+        section {
+
+            padding: 100px 10%;
+
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 55px;
+
+        }
+
+
+        .section-title h2 {
+
+            font-family: 'Kanit', sans-serif;
+
+            font-size: 45px;
+
+            color: #315c45;
+
+        }
+
+
+        .section-title p {
+
+            margin-top: 10px;
+
+            color: #7b887e;
+
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+
+        }
+
+
+        .profile-card {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+
+            padding: 30px;
+
+            background: white;
+
+            border-radius: 25px;
+
+            box-shadow: 0 15px 35px rgba(48, 88, 64, 0.08);
+
+        }
+
+
+        .profile-image {
+
+            width: 150px;
+
+            height: 150px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 5px solid #e5d7ec;
+
+        }
+
+
+        .profile-card h3 {
+
+            color: #315c45;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .profile-card p {
+
+            color: #758178;
+
+            line-height: 1.8;
+
+        }
+
+
+        .skills {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        .skill {
+
+            padding: 25px;
+
+            text-align: center;
+
+            border-radius: 18px;
+
+            background: #edf5ef;
+
+            transition: 0.3s;
+
+        }
+
+
+        .skill:hover {
+
+            transform: translateY(-8px);
+
+            background: #eadff0;
+
+        }
+
+
+        .skill-icon {
+
+            font-size: 38px;
+
+        }
+
+
+        .skill strong {
+
+            display: block;
+
+            margin-top: 8px;
+
+            color: #315c45;
+
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================== */
+
+        .projects {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 28px;
+
+        }
+
+
+        .project-card {
+
+            background: white;
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            box-shadow: 0 12px 30px rgba(48, 88, 64, 0.09);
+
+            transition: 0.4s;
+
+        }
+
+
+        .project-card:hover {
+
+            transform: translateY(-12px);
+
+        }
+
+
+        .project-image {
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+            display: block;
+
+        }
+
+
+        .project-content {
+
+            padding: 25px;
+
+        }
+
+
+        .project-content h3 {
+
+            color: #315c45;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .project-content p {
+
+            color: #78847b;
+
+            line-height: 1.8;
+
+            font-size: 14px;
+
+        }
+
+
+        .project-tag {
+
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding: 6px 14px;
+
+            border-radius: 20px;
+
+            background: #eadff0;
+
+            color: #754c89;
+
+            font-size: 12px;
+
+        }
+
+
+        /* =========================
+           ACTIVITIES
+        ========================== */
+
+        .activity-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .activity-card {
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 20px;
+
+            height: 250px;
+
+        }
+
+
+        .activity-card img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.5s;
+
+        }
+
+
+        .activity-card:hover img {
+
+            transform: scale(1.1);
+
+        }
+
+
+        .activity-info {
+
+            position: absolute;
+
+            bottom: 0;
+
+            left: 0;
+
+            right: 0;
+
+            padding: 20px;
+
+            color: white;
+
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,0.75)
+            );
+
+        }
+
+
+        .activity-info h3 {
+
+            font-size: 20px;
+
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+
+            text-align: center;
+
+            background: #315c45;
+
+            color: white;
+
+        }
+
+
+        .contact h2 {
+
+            font-family: 'Kanit', sans-serif;
+
+            font-size: 42px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .contact p {
+
+            color: #dce8df;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .contact .button {
+
+            background: white;
+
+            color: #315c45;
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+
+            text-align: center;
+
+            padding: 20px;
+
+            background: #203a29;
+
+            color: #d3dfd5;
+
+            font-size: 13px;
+
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 850px) {
+
+            nav ul {
+
+                display: none;
+
+            }
+
+
+            .hero {
+
+                flex-direction: column;
+
+                text-align: center;
+
+            }
+
+
+            .science-visual {
+
+                transform: scale(0.8);
+
+            }
+
+
+            .about {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .projects,
+            .activity-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .profile-card {
+
+                flex-direction: column;
+
+                text-align: center;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav>
+
+        <div class="logo">
+
+            BIO<span>PORTFOLIO</span>
+
+        </div>
+
+
+        <ul>
+
+            <li>
+                <a href="#home">หน้าแรก</a>
+            </li>
+
+            <li>
+                <a href="#about">เกี่ยวกับฉัน</a>
+            </li>
+
+            <li>
+                <a href="#projects">ผลงาน</a>
+            </li>
+
+            <li>
+                <a href="#activities">กิจกรรม</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+
+        <div class="hero-text">
+
+
+            <div class="small-title">
+
+                🔬 Biology • Science • Discovery
+
+            </div>
+
+
+            <h1>
+
+                Discover the
+
+                <br>
+
+                <span>Beauty of Life</span>
+
+            </h1>
+
+
+            <p>
+
+                แฟ้มสะสมผลงานที่รวบรวมความสนใจ
+                ผลงาน และประสบการณ์ด้านวิทยาศาสตร์
+                เพื่อก้าวเข้าสู่เส้นทางแห่งการค้นพบ
+                ในโลกของชีววิทยา
+
+            </p>
+
+
+            <a href="#projects" class="button">
+
+                ชมผลงาน
+
+            </a>
+
+
+            <a href="#about" class="button button-outline">
+
+                เกี่ยวกับฉัน
+
+            </a>
+
+
+        </div>
+
+
+        <!-- DNA -->
+
+        <div class="science-visual">
+
+
+            <div class="dna">
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+            </div>
+
+
+            <div class="floating cell">
+
+                🧫
+
+            </div>
+
+
+            <div class="floating leaf">
+
+                🌿
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT ME
+    ========================== -->
+
+    <section id="about">
+
+
+        <div class="section-title">
+
+            <h2>
+
+                About Me
+
+            </h2>
+
+
+            <p>
+
+                นักเรียนผู้สนใจการค้นพบความมหัศจรรย์ของสิ่งมีชีวิต
+
+            </p>
+
+        </div>
+
+
+        <div class="about">
+
+
+            <div class="profile-card">
+
+
+                <!-- เปลี่ยนรูปตรงนี้ -->
+
+                <img
+
+                    src="images/profile.jpg"
+
+                    alt="Profile"
+
+                    class="profile-image"
+
+                >
+
+
+                <div>
+
+                    <h3>
+
+                        นางสาวภิรญา ไตรรัตจิต
+
+                    </h3>
+
+
+                    <p>
+
+                        นักเรียนชั้นมัธยมศึกษาปีที่ 6
+
+                        <br>
+
+                        ผู้มีความสนใจด้านชีววิทยา
+
+                        วิทยาศาสตร์ และการวิจัย
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="skills">
+
+
+                <div class="skill">
+
+                    <div class="skill-icon">
+
+                        🔬
+
+                    </div>
+
+
+                    <strong>
+
+                        การทดลอง
+
+                    </strong>
+
+
+                    <small>
+
+                        Experiment
+
+                    </small>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-icon">
+
+                        🧬
+
+                    </div>
+
+
+                    <strong>
+
+                        ชีววิทยา
+
+                    </strong>
+
+
+                    <small>
+
+                        Biology
+
+                    </small>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-icon">
+
+                        🧪
+
+                    </div>
+
+
+                    <strong>
+
+                        การวิจัย
+
+                    </strong>
+
+
+                    <small>
+
+                        Research
+
+                    </small>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-icon">
+
+                        🌱
+
+                    </div>
+
+
+                    <strong>
+
+                        สิ่งแวดล้อม
+
+                    </strong>
+
+
+                    <small>
+
+                        Environment
+
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section id="projects">
+
+
+        <div class="section-title">
+
+
+            <h2>
+
+                My Scientific Projects
+
+            </h2>
+
+
+            <p>
+
+                ผลงานที่สะท้อนความสนใจและการเรียนรู้ด้านวิทยาศาสตร์
+
+            </p>
+
+
+        </div>
+
+
+        <div class="projects">
+
+
+            <!-- ผลงานที่ 1 -->
+
+            <div class="project-card">
+
+
+                <img
+
+                    src="images/project1.jpg"
+
+                    alt="Bioplastic Project"
+
+                    class="project-image"
+
+                >
+
+
+                <div class="project-content">
+
+
+                    <h3>
+
+                        ไบโอพลาสติกจากเกล็ดปลา
+
+                    </h3>
+
+
+                    <p>
+
+                        โครงงานศึกษาการนำวัสดุเหลือใช้
+                        จากธรรมชาติมาพัฒนาเป็นวัสดุ
+                        ที่เป็นมิตรต่อสิ่งแวดล้อม
+
+                    </p>
+
+
+                    <span class="project-tag">
+
+                        Biology Research
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ผลงานที่ 2 -->
+
+            <div class="project-card">
+
+
+                <img
+
+                    src="images/project2.jpg"
+
+                    alt="Science Experiment"
+
+                    class="project-image"
+
+                >
+
+
+                <div class="project-content">
+
+
+                    <h3>
+
+                        การทดลองทางวิทยาศาสตร์
+
+                    </h3>
+
+
+                    <p>
+
+                        การเรียนรู้ผ่านกระบวนการทดลอง
+                        การเก็บข้อมูล และการวิเคราะห์ผล
+                        อย่างเป็นระบบ
+
+                    </p>
+
+
+                    <span class="project-tag">
+
+                        Laboratory
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ผลงานที่ 3 -->
+
+            <div class="project-card">
+
+
+                <img
+
+                    src="images/project3.jpg"
+
+                    alt="Environment Project"
+
+                    class="project-image"
+
+                >
+
+
+                <div class="project-content">
+
+
+                    <h3>
+
+                        วิทยาศาสตร์และสิ่งแวดล้อม
+
+                    </h3>
+
+
+                    <p>
+
+                        การศึกษาวิทยาศาสตร์เพื่อสร้างความเข้าใจ
+                        และแนวทางการใช้ทรัพยากรอย่างยั่งยืน
+
+                    </p>
+
+
+                    <span class="project-tag">
+
+                        Environment
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================
+         ACTIVITIES
+    ========================== -->
+
+    <section id="activities">
+
+
+        <div class="section-title">
+
+
+            <h2>
+
+                Activities & Experiences
+
+            </h2>
+
+
+            <p>
+
+                ประสบการณ์และกิจกรรมที่ได้เรียนรู้
+
+            </p>
+
+
+        </div>
+
+
+        <div class="activity-grid">
+
+
+            <div class="activity-card">
+
+
+                <img
+
+                    src="images/activity1.jpg"
+
+                    alt="Science Activity"
+
+                >
+
+
+                <div class="activity-info">
+
+                    <h3>
+
+                        กิจกรรมวิทยาศาสตร์
+
+                    </h3>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="activity-card">
+
+
+                <img
+
+                    src="images/activity2.jpg"
+
+                    alt="Laboratory Activity"
+
+                >
+
+
+                <div class="activity-info">
+
+                    <h3>
+
+                        ประสบการณ์ในห้องปฏิบัติการ
+
+                    </h3>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="activity-card">
+
+
+                <img
+
+                    src="images/activity3.jpg"
+
+                    alt="Learning Activity"
+
+                >
+
+
+                <div class="activity-info">
+
+                    <h3>
+
+                        การเรียนรู้และพัฒนาตนเอง
+
+                    </h3>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact">
+
+
+        <h2>
+
+            Let's Discover Life Together
+
+        </h2>
+
+
+        <p>
+
+            ทุกการค้นพบเริ่มต้นจากคำถามเล็ก ๆ
+
+        </p>
+
+
+        <a
+
+            href="mailto:your@email.com"
+
+            class="button"
+
+        >
+
+            ติดต่อฉัน
+
+        </a>
+
+
+    </section>
+
+
+    <footer>
+
+        © 2026 Biology Portfolio
+
+        <br>
+
+        Silpakorn University
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+
+        /* =========================
+           SCROLL ANIMATION
+        ========================== */
+
+
+        const cards = document.querySelectorAll(
+
+            ".project-card, .activity-card, .profile-card, .skill"
+
+        );
+
+
+        const observer = new IntersectionObserver(
+
+            (entries) => {
+
+
+                entries.forEach((entry) => {
+
+
+                    if (entry.isIntersecting) {
+
+
+                        entry.target.classList.add("show");
+
+
+                    }
+
+
+                });
+
+
+            },
+
+            {
+
+                threshold: 0.15
+
+            }
+
+        );
+
+
+        cards.forEach((card) => {
+
+
+            card.style.opacity = "0";
+
+            card.style.transform = "translateY(35px)";
+
+            card.style.transition = "0.7s ease";
+
+
+            observer.observe(card);
+
+
+        });
+
+
+        /* =========================
+           ADD CLASS WHEN VISIBLE
+        ========================== */
+
+
+        const style = document.createElement("style");
+
+
+        style.innerHTML = `
+
+            .show {
+
+                opacity: 1 !important;
+
+                transform: translateY(0) !important;
+
+            }
+
+        `;
+
+
+        document.head.appendChild(style);
+
+
+        /* =========================
+           CONSOLE MESSAGE
+        ========================== */
+
+
+        console.log(
+
+            "Welcome to Biology Portfolio 🔬🧬🌿"
+
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
